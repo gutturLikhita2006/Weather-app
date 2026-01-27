@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <div class="search">
-            <input type="text" placeholder="Enter City Name" spellcheck="false">
-            <button>Search</button>
+    <div class="weather-card">
+        <h2>Weather App</h2>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
         </div>
-        <div class="weather">
-            <h1 class="temp">--°C</h1>
-            <h2 class="city">Search a City</h2>
+
+        <div id="weatherInfo" style="display: none;">
+            <h1 id="cityName">City</h1>
+            <p id="description">Description</p>
+            <h2 id="temp">--°C</h2>
             <div class="details">
-                <p>Humidity: <span class="humidity">--%</span></p>
-                <p>Wind Speed: <span class="wind">-- km/h</span></p>
+                <span>Humidity: <b id="humidity">--%</b></span> | 
+                <span>Wind: <b id="wind">-- km/h</b></span>
             </div>
         </div>
+        <p id="errorMessage" style="color: red; display: none;">City not found!</p>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
